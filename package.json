@@ -1,0 +1,51 @@
+{
+  "name": "65130413_Jittabun",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@auth-kit/react-router": "^3.1.3",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@headlessui/react": "^1.7.18",
+    "@material-tailwind/react": "^2.1.9",
+    "@mui/material": "^5.15.15",
+    "@mui/x-date-pickers": "^7.1.1",
+    "aos": "^2.3.4",
+    "axios": "^1.6.8",
+    "classnames": "^2.5.1",
+    "date-fns": "^3.6.0",
+    "dayjs": "^1.11.11",
+    "flatpickr": "^4.6.13",
+    "hero-slider": "^3.2.1",
+    "react": "^18.2.0",
+    "react-auth-kit": "^3.1.3",
+    "react-countup": "^6.5.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^4.12.0",
+    "react-qr-code": "^2.0.15",
+    "react-slick": "^0.29.0",
+    "recharts": "^2.12.4",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.2.0",
+    "autoprefixer": "^10.4.16",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "postcss": "^8.4.32",
+    "react-router-dom": "^6.22.3",
+    "tailwindcss": "^3.3.6",
+    "vite": "^5.0.0"
+  }
+}

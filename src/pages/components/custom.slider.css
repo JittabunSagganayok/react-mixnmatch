@@ -1,0 +1,137 @@
+.slider__item {
+  position: relative;
+  /* Enable positioning of the text element */
+}
+
+.slider__item-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute; */
+  /* Position the text at the bottom */
+  bottom: 0;
+  /* Align to the bottom of the slide */
+  left: 0;
+  /* Align to the left of the slide */
+  right: 0;
+  /* Stretch across the entire width */
+  padding: 1rem;
+  /* Add some padding for better readability */
+  background-color: white;
+  /* Set background color to white */
+  color: black;
+  /* Set text color to black */
+}
+
+
+.container__slider {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: black;
+}
+
+.container__slider>button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  color: whitesmoke;
+  font-size: 24px;
+}
+
+.container__slider>button:active {
+  color: black;
+}
+
+.slider__btn-next {
+  position: absolute;
+  right: 0;
+}
+
+.slider__btn-prev {
+  position: absolute;
+  left: 0;
+}
+
+.container__slider__links {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container__slider__links-small {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border-radius: 50%;
+  outline: none;
+  border: 0;
+  background-color: white;
+  border: 1px solid grey;
+  transition: background-color 1s ease;
+  margin: 0 2px;
+}
+
+.container__slider__links-small-active {
+  background-color: black;
+}
+
+.slider__item {
+  box-sizing: border-box;
+  min-width: 100%;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+  height: auto;
+  transform: translateX(0);
+  transition: transform 1s ease;
+}
+
+.slider__item-active-1 {
+  transform: translateX(0);
+}
+
+.slider__item-active-2 {
+  transform: translateX(-100%);
+}
+
+.slider__item-active-3 {
+  transform: translateX(-200%);
+}
+
+.slider__item-active-4 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-5 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-6 {
+  transform: translateX(-300%);
+}
+
+.slider__item-active-7 {
+  transform: translateX(-300%);
+}
+
+.slider__item img {
+
+  /* Set max height to screen height */
+  max-height: 90vh;
+
+  /* Maintain aspect ratio and fit content within the container */
+  object-fit: contain;
+
+  /* Optional: Set width to 100% for full width within the slide */
+  width: 100%;
+  /* Uncomment if needed */
+}
