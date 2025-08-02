@@ -20,7 +20,7 @@ export default function UserCreate() {
       lname: lname,
       avatar: avatar,
     };
-    fetch("http://localhost:8000/api/register", {
+    fetch("https://api-mixnmatch-ig1a.vercel.app/api/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

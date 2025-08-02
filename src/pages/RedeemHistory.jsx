@@ -29,7 +29,7 @@ export default function Redeemhistory() {
   }, []);
 
   //   const UsersGet = () => {
-  //     fetch("http://localhost:8000/users")
+  //     fetch("https://api-mixnmatch-ig1a.vercel.app/users")
   //       .then((res) => res.json())
   //       .then((result) => {
   //         setUsers(result);
@@ -59,7 +59,7 @@ export default function Redeemhistory() {
     };
 
     fetch(
-      `http://localhost:8000/booking/redeem/${auth.branchId}`,
+      `https://api-mixnmatch-ig1a.vercel.app/booking/redeem/${auth.branchId}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -105,7 +105,10 @@ export default function Redeemhistory() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/booking/redeem/" + userId, requestOptions)
+    fetch(
+      "https://api-mixnmatch-ig1a.vercel.app/booking/redeem/" + userId,
+      requestOptions
+    )
       .then((response) => response.text())
       // .then((result) => (window.location.href = "/admin/user"))
       .catch((error) => console.log("error", error));
@@ -134,7 +137,7 @@ export default function Redeemhistory() {
               gutterBottom
             >
               ตาราง : ประวัติการแลกแต้ม
-              {/* http://localhost:8000/booking/redeem
+              {/* https://api-mixnmatch-ig1a.vercel.app/booking/redeem
               LIST IN DASHBOARD */}
             </Typography>
           </Box>

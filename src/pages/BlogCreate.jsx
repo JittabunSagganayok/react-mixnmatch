@@ -63,7 +63,7 @@ export default function ShopCreate() {
       body: raw,
       redirect: "follow",
     };
-    fetch("http://localhost:8000/blog", requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/blog", requestOptions)
       .then((res) => res.json())
       .then((result) => {
         alert(result["message"]);

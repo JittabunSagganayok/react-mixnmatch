@@ -99,7 +99,7 @@ const Places = () => {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/shoprecom", requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/shoprecom", requestOptions)
       .then((response) => response.json())
       .then((result) => {
         // setPlaces(result);

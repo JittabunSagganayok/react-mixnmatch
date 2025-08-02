@@ -29,7 +29,7 @@ export default function User() {
   }, []);
 
   //   const UsersGet = () => {
-  //     fetch("http://localhost:8000/users")
+  //     fetch("https://api-mixnmatch-ig1a.vercel.app/users")
   //       .then((res) => res.json())
   //       .then((result) => {
   //         setUsers(result);
@@ -58,7 +58,10 @@ export default function User() {
       redirect: "follow",
     };
 
-    fetch(`http://localhost:8000/users/branch/${auth.branchId}`, requestOptions)
+    fetch(
+      `https://api-mixnmatch-ig1a.vercel.app/users/branch/${auth.branchId}`,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         setUsers(result);
@@ -91,7 +94,7 @@ export default function User() {
   //     redirect: "follow",
   //   };
 
-  //   fetch(`http://localhost:8000/users/${id}`, requestOptions)
+  //   fetch(`https://api-mixnmatch-ig1a.vercel.app/users/${id}`, requestOptions)
   //     .then((response) => response.json())
   //     .then((result) => {
   //       // setUsers(result);
@@ -134,7 +137,7 @@ export default function User() {
               gutterBottom
             >
               ตาราง : รายชื่อลูกค้า
-              {/* http://localhost:8000/usersForEachBranch w/Point */}
+              {/* https://api-mixnmatch-ig1a.vercel.app/usersForEachBranch w/Point */}
             </Typography>
           </Box>
           {/* <Box>

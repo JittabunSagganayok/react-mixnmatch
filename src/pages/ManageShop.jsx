@@ -48,7 +48,10 @@ export default function ManageShop() {
       redirect: "follow",
     };
 
-    await fetch("http://localhost:8000/shoprecom", requestOptions)
+    await fetch(
+      "https://api-mixnmatch-ig1a.vercel.app/shoprecom",
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         setUsers(result);
@@ -82,7 +85,10 @@ export default function ManageShop() {
       redirect: "follow",
     };
 
-    fetch(`http://localhost:8000/shoprecom/${id}`, requestOptions)
+    fetch(
+      `https://api-mixnmatch-ig1a.vercel.app/shoprecom/${id}`,
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         // setUsers(result);

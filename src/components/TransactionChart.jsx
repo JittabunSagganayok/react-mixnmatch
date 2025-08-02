@@ -108,7 +108,7 @@ export default function TransactionChart() {
     };
 
     fetch(
-      `http://localhost:8000/dashboard/graphdata?idBranch=${auth.branchId}`,
+      `https://api-mixnmatch-ig1a.vercel.app/dashboard/graphdata?idBranch=${auth.branchId}`,
       requestOptions
     )
       .then((response) => response.json())

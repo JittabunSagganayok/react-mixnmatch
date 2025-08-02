@@ -44,7 +44,7 @@ export default function RecentOrders() {
     };
 
     fetch(
-      `http://localhost:8000/dashboard/recentcheckin?idBranch=${auth.branchId}`,
+      `https://api-mixnmatch-ig1a.vercel.app/dashboard/recentcheckin?idBranch=${auth.branchId}`,
       requestOptions
     )
       .then((response) => response.json())
@@ -61,7 +61,7 @@ export default function RecentOrders() {
         <div className="bg-white px-4 pt-3 pb-4 rounded-sm border border-gray-200 flex-1">
           <strong className="text-gray-700 font-medium">
             Recent Check-In
-            {/* http://localhost:8000/dashboard/recentcheckin?idBranch=1 */}
+            {/* https://api-mixnmatch-ig1a.vercel.app/dashboard/recentcheckin?idBranch=1 */}
           </strong>
           <div className="border-x border-gray-200 rounded-sm mt-3">
             <table className="w-full text-gray-700">

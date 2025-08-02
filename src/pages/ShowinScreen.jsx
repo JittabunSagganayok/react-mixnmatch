@@ -42,7 +42,7 @@ export default function ShowinScreen() {
       }
 
       const response = await fetch(
-        `http://localhost:8000/display?branchId=${auth.branchId}`,
+        `https://api-mixnmatch-ig1a.vercel.app/display?branchId=${auth.branchId}`,
         {
           method: "GET",
           headers: {

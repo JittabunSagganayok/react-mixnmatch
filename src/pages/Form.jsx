@@ -126,7 +126,7 @@ export default function Form() {
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `Bearer ${token}`);
     fetch(
-      `http://localhost:8000/booking?tablenumbername=0&idBranch=${
+      `https://api-mixnmatch-ig1a.vercel.app/booking?tablenumbername=0&idBranch=${
         auth.branchId
       }&dateReserve=${convertDateToString(selectedDatebooking2)}`,
       {
@@ -152,11 +152,14 @@ export default function Form() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `Bearer ${token}`);
-    fetch(`http://localhost:8000/booking/tableinfo?idBranch=${auth.branchId}`, {
-      method: "GET",
-      headers: myHeaders,
-      // body: JSON.stringify(datauser),
-    })
+    fetch(
+      `https://api-mixnmatch-ig1a.vercel.app/booking/tableinfo?idBranch=${auth.branchId}`,
+      {
+        method: "GET",
+        headers: myHeaders,
+        // body: JSON.stringify(datauser),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         console.log("get tableinfo", result);
@@ -172,11 +175,14 @@ export default function Form() {
     const myHeaders = new Headers();
     myHeaders.append("Content-Type", "application/json");
     myHeaders.append("Authorization", `Bearer ${token}`);
-    fetch(`http://localhost:8000/redeempromo?idBranch=${auth.branchId}`, {
-      method: "GET",
-      headers: myHeaders,
-      // body: JSON.stringify(datauser),
-    })
+    fetch(
+      `https://api-mixnmatch-ig1a.vercel.app/redeempromo?idBranch=${auth.branchId}`,
+      {
+        method: "GET",
+        headers: myHeaders,
+        // body: JSON.stringify(datauser),
+      }
+    )
       .then((res) => res.json())
       .then((result) => {
         console.log("get promo", result);
@@ -211,7 +217,7 @@ export default function Form() {
     console.log("bodydata", bodydata);
     // if (tablenumber != null && seat != null) {
     try {
-      fetch("http://localhost:8000/booking", {
+      fetch("https://api-mixnmatch-ig1a.vercel.app/booking", {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(bodydata),
@@ -253,7 +259,7 @@ export default function Form() {
 
     var bodydata = datapromotionforpost;
     try {
-      fetch("http://localhost:8000/redeempromo", {
+      fetch("https://api-mixnmatch-ig1a.vercel.app/redeempromo", {
         method: "POST",
         headers: myHeaders,
         body: JSON.stringify(bodydata),

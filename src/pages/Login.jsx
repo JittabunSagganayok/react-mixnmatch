@@ -32,7 +32,7 @@ const Login = () => {
         password: password,
       };
       try {
-        fetch("http://localhost:8000/api/login", {
+        fetch("https://api-mixnmatch-ig1a.vercel.app/api/login", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

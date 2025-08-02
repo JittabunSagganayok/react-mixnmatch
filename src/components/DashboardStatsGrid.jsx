@@ -80,7 +80,7 @@ export default function DashboardStatsGrid() {
     };
 
     fetch(
-      `http://localhost:8000/dashboard/maincount?idBranch=${auth.branchId}`,
+      `https://api-mixnmatch-ig1a.vercel.app/dashboard/maincount?idBranch=${auth.branchId}`,
       requestOptions
     )
       .then((response) => response.json())

@@ -9,7 +9,7 @@ import Container from "@mui/material/Container";
 export default function UserUpdate() {
   const { id } = useParams();
   useEffect(() => {
-    // fetch("http://localhost:8000/users/" + id)
+    // fetch("https://api-mixnmatch-ig1a.vercel.app/users/" + id)
     //   .then((res) => res.json())
     //   .then((result) => {
     //     setFname(result.user.fname);
@@ -39,7 +39,7 @@ export default function UserUpdate() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/users/" + id, requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/users/" + id, requestOptions)
       .then((res) => res.json())
       .then((result) => {
         // console.log(result[0].fname);
@@ -82,7 +82,7 @@ export default function UserUpdate() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/users/" + id, requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/users/" + id, requestOptions)
       .then((response) => response.text())
       .then((result) => (window.location.href = "/admin/user"))
       .catch((error) => console.log("error", error));

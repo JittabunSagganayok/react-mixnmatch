@@ -48,7 +48,10 @@ export default function Requestjoin() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/users/requestjoin", requestOptions)
+    fetch(
+      "https://api-mixnmatch-ig1a.vercel.app/users/requestjoin",
+      requestOptions
+    )
       .then((response) => response.json())
       .then((result) => {
         let myList = new Array(result.length).fill(false);
@@ -86,7 +89,10 @@ export default function Requestjoin() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/users/" + userId, requestOptions)
+    fetch(
+      "https://api-mixnmatch-ig1a.vercel.app/users/" + userId,
+      requestOptions
+    )
       .then((response) => response.text())
       // .then((result) => (window.location.href = "/admin/user"))
       .catch((error) => console.log("error", error));

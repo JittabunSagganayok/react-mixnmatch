@@ -56,7 +56,7 @@ export default function ShopUpdate() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/blog/" + id, requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/blog/" + id, requestOptions)
       .then((res) => res.json())
       .then((result) => {
         setShopname(result[0].blogtitle);
@@ -107,7 +107,7 @@ export default function ShopUpdate() {
       redirect: "follow",
     };
 
-    fetch("http://localhost:8000/blog/" + id, requestOptions)
+    fetch("https://api-mixnmatch-ig1a.vercel.app/blog/" + id, requestOptions)
       .then((response) => response.text())
       .then((result) => (window.location.href = "/admin/manageshops"))
       .catch((error) => console.log("error", error));
