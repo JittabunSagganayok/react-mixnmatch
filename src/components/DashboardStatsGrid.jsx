@@ -182,12 +182,15 @@ FROM (
                 </span>
                 <div className="flex items-center">
                   <strong className="text-xl text-gray-700 font-semibold">
-                    {filter == "วันนี้"
-                      ? dataCountGet.bookingcount[0].reserve_count
-                      : filter == "สัปดาห์นี้"
-                      ? dataCountGet.bookingcount[1].reserve_count
-                      : dataCountGet.bookingcount[2].reserve_count}
+                    {dataCountGet.bookingcount.find(
+                      (item) =>
+                        (filter === "วันนี้" && item.period === "Today") ||
+                        (filter === "เดือนนี้" &&
+                          item.period === "This Month") ||
+                        (filter === "ปีนี้" && item.period === "This Year")
+                    )?.reserve_count ?? 0}
                   </strong>
+
                   <span className="text-sm text-green-500 pl-2"> ครั้ง</span>
                 </div>
               </div>
@@ -247,11 +250,13 @@ FROM (
                 </span>
                 <div className="flex items-center">
                   <strong className="text-xl text-gray-700 font-semibold">
-                    {filter == "วันนี้"
-                      ? dataCountGet.checkincount[0].checkin_count
-                      : filter == "สัปดาห์นี้"
-                      ? dataCountGet.checkincount[1].checkin_count
-                      : dataCountGet.checkincount[2].checkin_count}
+                    {dataCountGet.checkincount.find(
+                      (item) =>
+                        (filter === "วันนี้" && item.period === "Today") ||
+                        (filter === "เดือนนี้" &&
+                          item.period === "This Month") ||
+                        (filter === "ปีนี้" && item.period === "This Year")
+                    )?.reserve_count ?? 0}
                   </strong>
                   <span className="text-sm text-green-500 pl-2">ครั้ง</span>
                 </div>
@@ -311,11 +316,13 @@ FROM (
                 </span>
                 <div className="flex items-center">
                   <strong className="text-xl text-gray-700 font-semibold">
-                    {filter == "วันนี้"
-                      ? dataCountGet.redeemcount[0].redeem_count
-                      : filter == "สัปดาห์นี้"
-                      ? dataCountGet.redeemcount[1].redeem_count
-                      : dataCountGet.redeemcount[2].redeem_count}
+                    {dataCountGet.redeemcount.find(
+                      (item) =>
+                        (filter === "วันนี้" && item.period === "Today") ||
+                        (filter === "เดือนนี้" &&
+                          item.period === "This Month") ||
+                        (filter === "ปีนี้" && item.period === "This Year")
+                    )?.reserve_count ?? 0}
                   </strong>
                   <span className="text-sm text-green-500 pl-2">ครั้ง</span>
                 </div>
