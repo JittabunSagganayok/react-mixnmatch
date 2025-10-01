@@ -33,16 +33,18 @@ export default function DashboardStatsGrid() {
     ปีนี้: "This Year",
   };
 
-  // helper function หาค่าตาม filter
   const getCount = (dataArray, keyName) => {
-    return (
-      dataArray.find((item) => item.period === periodMap[filter])?.[keyName] ??
-      0
+    const targetPeriod = periodMap[filter];
+    const found = dataArray.find(
+      (item) =>
+        item.period.trim().toLowerCase() === targetPeriod.trim().toLowerCase()
     );
+    return found ? found[keyName] : 0;
   };
 
   useEffect(() => {
     console.log("dropdownchange", filter);
+    console.log(dataCountGet.redeemcount);
   }, [filter]);
 
   useEffect(() => {
