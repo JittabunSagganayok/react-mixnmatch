@@ -256,7 +256,7 @@ FROM (
                         (filter === "เดือนนี้" &&
                           item.period === "This Month") ||
                         (filter === "ปีนี้" && item.period === "This Year")
-                    )?.reserve_count ?? 0}
+                    )?.checkin_count ?? 0}
                   </strong>
                   <span className="text-sm text-green-500 pl-2">ครั้ง</span>
                 </div>
@@ -322,7 +322,7 @@ FROM (
                         (filter === "เดือนนี้" &&
                           item.period === "This Month") ||
                         (filter === "ปีนี้" && item.period === "This Year")
-                    )?.reserve_count ?? 0}
+                    )?.redeem_count ?? 0}
                   </strong>
                   <span className="text-sm text-green-500 pl-2">ครั้ง</span>
                 </div>
